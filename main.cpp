@@ -14,14 +14,14 @@ int main() {
     if (uart_fd < 0) return 1;
 
     // Send data
-    const char* msg = "Hello UART\n";
+    const char* msg = "HELLO UART\n";
     cout << "Hello from UART" << endl;
     for(int i=0; i< 10; ++i)
     {
         write(uart_fd, msg, strlen(msg));
         cout << "the message sent successfully" << endl;
         // Receive (blocking read)
-        char buf[100];
+        char buf[50];
         int n = read(uart_fd, buf, sizeof(buf) - 1);
         if (n > 0) {
             cout << "the message received successfully" << endl;
