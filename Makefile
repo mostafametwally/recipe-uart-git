@@ -12,8 +12,8 @@ $(TARGET) : $(OBJ)
 	${CXX} $(CXXFLAGS) ${LDFLAGS} -o $@ $^ 
 # 	uart.o config_uart.o -o uart_led
 
-# uart.o: uart.cpp
-# 	${CXX} ${CXXFLAGS} -c uart.cpp -o uart.o
+main.o: main.cpp
+	${CXX} ${CXXFLAGS} -c main.cpp -o main.o
 
 # config_uart.o: config_uart.cpp
 # 	${CXX} ${CXXFLAGS} -c config_uart.cpp -o config_uart.o
