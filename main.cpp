@@ -10,6 +10,7 @@ using namespace std;
 
 
 int main() {
+    cout << "title add to uart app 9600 B, no parity and 1 stop bit 8N1" << endl;
     int uart_fd = configure_uart("/dev/ttyS0", B9600);
     if (uart_fd < 0) return 1;
 
